@@ -33,7 +33,7 @@ Classification Report: Provides precision, recall, F1-score, and support for eac
 Confusion Matrix: Visual representation showing the number of correct and incorrect predictions.
 Decision Boundary Plot: Displays the SVM's decision boundary and support vectors in a scatter plot.
 Contact
-For questions or issues regarding this repository, please contact your-email@example.com.
+For questions or issues regarding this repository, please contact la_belharda@esi.dz.
 
 
 
