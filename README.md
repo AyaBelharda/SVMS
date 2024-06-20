@@ -1,39 +1,43 @@
-Overview
-This repository contains code for training a Support Vector Machine (SVM) classifier on the Iris dataset using scikit-learn. The SVM is implemented with a linear kernel to classify Iris flowers into two classes based on sepal length and width.
+Breast Cancer Detection Using SVM Classifiers
+This script demonstrates the use of Support Vector Machines (SVMs) for classifying breast cancer tumors based on extracted features from digitized images of fine needle aspirates (FNA).
 
-Files
-svm_iris_classification.py: Python script containing the SVM training, evaluation, and visualization.
-README.md: This file.
-Requirements
-Python 3.x
-Libraries: pandas, numpy, matplotlib, seaborn, scikit-learn
-Installation
-Clone the repository:
-bash
-Copier le code
-git clone <repository-url>
-cd <repository-directory>
-Install dependencies:
-Copier le code
-pip install -r requirements.txt
+Dataset
+The dataset used is the Breast Cancer Wisconsin (Diagnostic) dataset from scikit-learn's load_breast_cancer module. It contains 30 features computed from images of breast mass FNA, including measures like radius, texture, perimeter, area, smoothness, compactness, concavity, symmetry, and fractal dimension.
+
 Usage
-Run the script svm_iris_classification.py:
+Dependencies:
 
-Copier le code
-python svm_iris_classification.py
-The script loads the Iris dataset, preprocesses it by selecting two features (sepal length and width) and two classes (Setosa and Versicolor), splits the data into training and testing sets, and standardizes the features.
+Python 3.x
+NumPy
+Matplotlib
+scikit-learn (sklearn)
+Setup:
 
-It trains a linear SVM model using the training data and evaluates its performance on the test set by calculating accuracy, printing a classification report, and displaying a confusion matrix.
+Ensure all dependencies are installed (pip install numpy matplotlib scikit-learn).
+Download or clone the script and dataset files.
+Running the Script:
 
-Additionally, the script visualizes the decision boundary and support vectors of the SVM model using matplotlib and seaborn. It also performs cross-validation to assess the model's generalization performance.
+Execute the script breast_cancer_svm.py.
+By default, the script trains and evaluates a Support Vector Machine with a linear kernel.
+You can switch to a radial basis function (RBF) kernel by uncommenting the relevant code block and commenting out the linear SVM section.
+Interpreting Results:
 
-Outputs
-Accuracy: Reported as a percentage.
-Classification Report: Provides precision, recall, F1-score, and support for each class.
-Confusion Matrix: Visual representation showing the number of correct and incorrect predictions.
-Decision Boundary Plot: Displays the SVM's decision boundary and support vectors in a scatter plot.
-Contact
-For questions or issues regarding this repository, please contact your-email@example.com.
+The script calculates and displays the accuracy, classification report, and confusion matrix for the chosen SVM model.
+Accuracy provides a percentage measure of correct predictions on the test set.
+The classification report gives precision, recall, F1-score, and support for each class.
+The confusion matrix visualizes true positive, true negative, false positive, and false negative counts.
+Example Results
+Linear SVM:
 
+Accuracy: 98.25%
+Classification Report: Detailed precision, recall, and F1-score for benign and malignant tumors.
+Confusion Matrix: Visual representation of predicted versus actual classifications.
+RBF SVM:
 
-
+Accuracy: 97.81%
+Classification Report: Similar detailed metrics as the linear SVM.
+Confusion Matrix: Reflects the performance of the RBF SVM on the test data.
+Notes
+Experiment with different SVM kernels (linear, poly, rbf) to find the best model for this dataset.
+Adjust the random_state parameter in train_test_split for reproducible results.
+Further optimization can be done by tuning SVM hyperparameters like C and gamma.
